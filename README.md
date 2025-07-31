@@ -63,3 +63,11 @@ todo-app/
 cd server
 dotnet run
 
+### 🌐 Frontend Setup (Angular)
+
+```bash
+cd client
+npm install
+ng serve
+
+
