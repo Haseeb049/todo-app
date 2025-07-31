@@ -57,17 +57,16 @@ todo-app/
 
 ---
 
-### 🖥 Backend Setup (.NET)
+### 💻 Backend Setup (.NET)
 
 ```bash
 cd server
 dotnet run
 
-### 🌐 Frontend Setup (Angular)
 
-```bash
 cd client
 npm install
 ng serve
+
 
 
