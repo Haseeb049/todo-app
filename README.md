@@ -31,3 +31,40 @@ A full-stack TODO list application built with **Angular 20** for the frontend an
 
 ## 📁 Project Structure
 
+todo-app/
+├── client/ # Angular frontend
+│ └── src/
+│ └── app/
+│ ├── app.component.ts
+│ └── todo.service.ts
+├── server/ # ASP.NET Core backend
+│ ├── Controllers/
+│ │ └── TodoController.cs
+│ ├── Models/
+│ │ └── TodoItem.cs
+│ └── Program.cs
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### ✅ Prerequisites
+
+- .NET SDK 9  
+- Node.js + npm  
+- Angular CLI (`npm install -g @angular/cli`)
+
+---
+
+### 🖥 Backend Setup (.NET v9)
+
+```bash
+cd server
+dotnet run
+
+### FrontEnd (Angular v20)
+cd client
+npm install
+ng serve
+
