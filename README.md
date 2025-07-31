@@ -1,90 +1,33 @@
-# todo-app
-TODO App Frontend: Angular cli v20.1.4 Backend: .NET 9.0.33 Web API (in-memory storage)
-This is a full-stack TODO list application built with Angular 20 for the frontend and ASP.NET Core 9 for the backend. It demonstrates basic CRUD operations using an in-memory list (no database required).
+# ✅ TODO App (Angular + .NET)
 
-🚀 Features
-View TODO items
+A full-stack TODO list application built with **Angular 20** for the frontend and **ASP.NET Core 9** Web API for the backend (using in-memory storage). Demonstrates basic CRUD operations without a database.
 
-Add new TODOs
+---
 
-Delete existing TODOs
+## 🚀 Features
 
-Simple and clean UI
+- View TODO items  
+- Add new TODOs  
+- Delete existing TODOs  
+- Clean and simple UI  
+- Seamless integration between Angular & .NET  
+- CORS-enabled cross-origin setup  
 
-Seamless integration between Angular and .NET
+---
 
-Cross-Origin Resource Sharing (CORS) is enabled
+## 🛠 Tech Stack
 
-🛠 Tech Stack
-Frontend	Backend
-Angular 20	ASP.NET Core 9
-TypeScript	C#
-HttpClient	In-Memory API
+**Frontend:**  
+- Angular v20  
+- TypeScript  
+- HttpClient  
 
-📂 Project Structure
-todo-app/
-├── client/         # Angular app
-│   ├── src/
-│   │   ├── app/
-│   │   │   └── app.component.ts
-│   │   │   └── todo.service.ts
-├── server/         # .NET Web API
-│   ├── Controllers/
-│   │   └── TodoController.cs
-│   ├── Models/
-│   │   └── TodoItem.cs
-│   └── Program.cs
+**Backend:**  
+- ASP.NET Core 9  
+- C#  
+- In-memory list  
 
+---
 
-⚙️ Setup Instructions
+## 📁 Project Structure
 
-Prerequisites
-.NET SDK 9
-
-Node.js & npm
-
-Angular CLI
-
-Backend Setup (.NET)
-
-cd server
-dotnet run
-The API will be available at: http://localhost:5139/api/todo
-
-Frontend Setup (Angular)
-
-cd client
-npm install
-ng serve
-The Angular app will run at: http://localhost:4200
-
-CORS Configuration
-In Program.cs of the server, make sure to include:
-
-csharp
-Copy
-Edit
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-app.UseCors();
-
-API Endpoints
-Method	Route	Description
-GET	/api/todo	Get all todos
-POST	/api/todo	Add a new todo
-DELETE	/api/todo/{id}	Delete a todo
-
-Example Payload (POST)
-json
-Copy
-Edit
-{
-  "task": "Learn Angular"
-}
