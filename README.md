@@ -57,14 +57,9 @@ todo-app/
 
 ---
 
-### 🖥 Backend Setup (.NET v9)
+### 🖥 Backend Setup (.NET)
 
 ```bash
 cd server
 dotnet run
-
-### FrontEnd (Angular v20)
-cd client
-npm install
-ng serve
 
