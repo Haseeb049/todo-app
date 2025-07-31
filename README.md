@@ -13,7 +13,7 @@ Simple and clean UI
 
 Seamless integration between Angular and .NET
 
-Cross-Origin Resource Sharing (CORS) enabled
+Cross-Origin Resource Sharing (CORS) is enabled
 
 🛠 Tech Stack
 Frontend	Backend
@@ -22,9 +22,6 @@ TypeScript	C#
 HttpClient	In-Memory API
 
 📂 Project Structure
-bash
-Copy
-Edit
 todo-app/
 ├── client/         # Angular app
 │   ├── src/
@@ -37,32 +34,31 @@ todo-app/
 │   ├── Models/
 │   │   └── TodoItem.cs
 │   └── Program.cs
+
+
 ⚙️ Setup Instructions
-✅ Prerequisites
+
+Prerequisites
 .NET SDK 9
 
 Node.js & npm
 
 Angular CLI
 
-🖥 Backend Setup (.NET)
-bash
-Copy
-Edit
+Backend Setup (.NET)
+
 cd server
 dotnet run
 The API will be available at: http://localhost:5139/api/todo
 
-🌐 Frontend Setup (Angular)
-bash
-Copy
-Edit
+Frontend Setup (Angular)
+
 cd client
 npm install
 ng serve
 The Angular app will run at: http://localhost:4200
 
-🔄 CORS Configuration
+CORS Configuration
 In Program.cs of the server, make sure to include:
 
 csharp
@@ -78,13 +74,14 @@ builder.Services.AddCors(options =>
     });
 });
 app.UseCors();
-📬 API Endpoints
+
+API Endpoints
 Method	Route	Description
 GET	/api/todo	Get all todos
 POST	/api/todo	Add a new todo
 DELETE	/api/todo/{id}	Delete a todo
 
-✅ Example Payload (POST)
+Example Payload (POST)
 json
 Copy
 Edit
