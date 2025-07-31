@@ -70,5 +70,28 @@ dotnet run
 cd client
 npm install
 ng serve
+```              
+### 🔄 CORS Setup in `Program.cs`
+
+```csharp
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+app.UseCors();
+```
+
+📬 API Endpoints
+| Method | Route            | Description     |
+| ------ | ---------------- | --------------- |
+| GET    | `/api/todo`      | Fetch all todos |
+| POST   | `/api/todo`      | Add a new todo  |
+| DELETE | `/api/todo/{id}` | Delete a todo   |
 
 
